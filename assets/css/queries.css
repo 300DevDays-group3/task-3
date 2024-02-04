@@ -1,0 +1,34 @@
+@media (max-width: 75em) {
+  .table {
+    grid-template-columns: 1.5fr 1fr 1fr 2fr;
+  }
+
+  .delete-icon,
+  .pen-icon,
+  .role,
+  .user-role {
+    display: none;
+  }
+}
+
+@media (max-width: 54em) {
+  .table {
+    grid-template-columns: 1.5fr 1fr 2fr;
+  }
+
+  .email,
+  .user-email {
+    display: none;
+  }
+}
+
+@media (max-width: 40em) {
+  .table {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .team,
+  .team-tags {
+    display: none;
+  }
+}
