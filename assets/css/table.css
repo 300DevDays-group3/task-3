@@ -10,6 +10,7 @@
   --table-border: solid 1px #d0d5dd;
   --grey-1: #f9fafb;
   --grey-2: #f2f4f7;
+  --grey-3: #D0D5DD;
   --grey-text: #667085;
   --black-text: #101828;
   --light-purple: #f9f5ff;
@@ -34,7 +35,6 @@ html {
   border-radius: 12px;
   border: var(--table-border);
   overflow: hidden;
-  height: 100vh;
 }
 
 .Title {
@@ -52,24 +52,22 @@ html {
   color: var(--purple);
 }
 
-.table {
-  border-bottom: var(--table-border);
+.table {  
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 2.5fr;
-  /* grid-auto-columns: minmax(120px, auto); */
-  align-items: center;
-  /* grid-gap: 0.5rem; */
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 2.5fr;  
+  align-content: center;  
 }
 
 .table-head {
   background-color: var(--grey-2);
   border-bottom: var(--table-border);
-  padding: 1.25rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .table-body {
   background-color: #fff;
   padding: 2rem;
+  border-bottom: var(--table-border);
 }
 
 .name,
@@ -154,3 +152,86 @@ html {
 .pen-icon {
   height: 2.4rem;
 }
+
+/* Checkbox Styling */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;  
+  width: 2em;
+  height: 2em;
+  border: 1px solid var(--grey-3);
+  border-radius: 4px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 2em;
+  height: 2em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--blue-2);
+  background-color: CanvasText;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+
+/* Table pagination */
+
+.table-pages{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0.25rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+ul .active {
+  background-color: var(--light-purple);
+  color: var(--purple);
+  border-radius: 8px;  
+}
+
+.mobile-page{
+  opacity: 0;
+}
+
+
+.previous-btn, .next-btn{
+  height: 2.5rem;;
+  color: var(--grey-text);
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  gap:0.5rem;
+  border: solid 1px var(--grey-3);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.previous-btn img{
+  transform: rotate(90deg);
+}
+
+.next-btn img{
+  transform: rotate(270deg);
+}
+
