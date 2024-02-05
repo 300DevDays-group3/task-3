@@ -13,12 +13,16 @@
 
 @media (max-width: 54em) {
   .table {
-    grid-template-columns: 1.5fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr 2fr;
   }
 
   .email,
   .user-email {
     display: none;
+  }
+
+  .team-tags{
+    flex-wrap: wrap;
   }
 }
 
@@ -27,8 +31,12 @@
     grid-template-columns: 1.5fr 1fr;
   }
 
-  .team,
-  .team-tags {
+  .teams,
+  .team,.pagination, .previous, .next {
     display: none;
+  }
+
+  .mobile-page{
+    opacity: 1;
   }
 }
