@@ -3,374 +3,652 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/table.css" />
-
-    <link rel="stylesheet" href="assets/css/queries.css" />
-    <title>Team Members Table</title>
+    <link rel="stylesheet" href="assets/css/product.css" />
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Product Search Page</title>
   </head>
   <body>
-    <main class="container">
-      <div class="Title">
-        <h2>Team members</h2>
-        <p class="users">100 users</p>
+    <header>
+      <nav>
+        <!-- nav1 starts here -->
+        <div id="nav1">
+          <h3 style="display: inline-flex; place-content: center; gap: 9px">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6 6H12V12H6V6Z" fill="#F76659" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.29289 0.292893C6.10536 0.48043 6 0.734784 6 1V2H4C3.46957 2 2.96086 2.21071 2.58579 2.58579C2.21071 2.96086 2 3.46957 2 4V6H1C0.734784 6 0.48043 6.10536 0.292893 6.29289C0.105357 6.48043 0 6.73478 0 7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89464 0.734784 8 1 8H2V10H1C0.734784 10 0.48043 10.1054 0.292893 10.2929C0.105357 10.4804 0 10.7348 0 11C0 11.2652 0.105357 11.5196 0.292893 11.7071C0.48043 11.8946 0.734784 12 1 12H2V14C2 14.5304 2.21071 15.0391 2.58579 15.4142C2.96086 15.7893 3.46957 16 4 16H6V17C6 17.2652 6.10536 17.5196 6.29289 17.7071C6.48043 17.8946 6.73478 18 7 18C7.26522 18 7.51957 17.8946 7.70711 17.7071C7.89464 17.5196 8 17.2652 8 17V16H10V17C10 17.2652 10.1054 17.5196 10.2929 17.7071C10.4804 17.8946 10.7348 18 11 18C11.2652 18 11.5196 17.8946 11.7071 17.7071C11.8946 17.5196 12 17.2652 12 17V16H14C14.5304 16 15.0391 15.7893 15.4142 15.4142C15.7893 15.0391 16 14.5304 16 14V12H17C17.2652 12 17.5196 11.8946 17.7071 11.7071C17.8946 11.5196 18 11.2652 18 11C18 10.7348 17.8946 10.4804 17.7071 10.2929C17.5196 10.1054 17.2652 10 17 10H16V8H17C17.2652 8 17.5196 7.89464 17.7071 7.70711C17.8946 7.51957 18 7.26522 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6H16V4C16 3.46957 15.7893 2.96086 15.4142 2.58579C15.0391 2.21071 14.5304 2 14 2H12V1C12 0.734784 11.8946 0.48043 11.7071 0.292893C11.5196 0.105357 11.2652 0 11 0C10.7348 0 10.4804 0.105357 10.2929 0.292893C10.1054 0.48043 10 0.734784 10 1V2H8V1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0C6.73478 0 6.48043 0.105357 6.29289 0.292893ZM14 4H4V14H14V4Z"
+                fill="#F76659"
+              />
+            </svg>
+            What a Market!
+          </h3>
+
+          <div style="display: flex; flex-direction: row; gap: 12px">
+            <button class="icon_btn" id="category_btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5 7C5 6.73478 5.10536 6.48043 5.29289 6.29289C5.48043 6.10536 5.73478 6 6 6H18C18.2652 6 18.5196 6.10536 18.7071 6.29289C18.8946 6.48043 19 6.73478 19 7C19 7.26522 18.8946 7.51957 18.7071 7.70711C18.5196 7.89464 18.2652 8 18 8H6C5.73478 8 5.48043 7.89464 5.29289 7.70711C5.10536 7.51957 5 7.26522 5 7ZM5 12C5 11.7348 5.10536 11.4804 5.29289 11.2929C5.48043 11.1054 5.73478 11 6 11H18C18.2652 11 18.5196 11.1054 18.7071 11.2929C18.8946 11.4804 19 11.7348 19 12C19 12.2652 18.8946 12.5196 18.7071 12.7071C18.5196 12.8946 18.2652 13 18 13H6C5.73478 13 5.48043 12.8946 5.29289 12.7071C5.10536 12.5196 5 12.2652 5 12ZM5 17C5 16.7348 5.10536 16.4804 5.29289 16.2929C5.48043 16.1054 5.73478 16 6 16H18C18.2652 16 18.5196 16.1054 18.7071 16.2929C18.8946 16.4804 19 16.7348 19 17C19 17.2652 18.8946 17.5196 18.7071 17.7071C18.5196 17.8946 18.2652 18 18 18H6C5.73478 18 5.48043 17.8946 5.29289 17.7071C5.10536 17.5196 5 17.2652 5 17Z"
+                  fill="white"
+                />
+              </svg>
+              &nbsp;&nbsp; Categories
+            </button>
+
+            <input type="text" name="search_item" id="search_item" />
+          </div>
+
+          <button class="icon_btn">
+            <svg
+              width="14"
+              height="16"
+              viewBox="0 0 14 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M8 15C8.00009 15.1704 8.04372 15.3379 8.12674 15.4867C8.20977 15.6355 8.32944 15.7607 8.47439 15.8502C8.61935 15.9398 8.78479 15.9908 8.95501 15.9985C9.12523 16.0061 9.29458 15.9702 9.447 15.894L13.447 13.894C13.6131 13.811 13.7528 13.6834 13.8504 13.5255C13.9481 13.3676 13.9999 13.1857 14 13V7.23602C13.9999 7.06562 13.9563 6.89808 13.8733 6.74929C13.7902 6.60049 13.6706 6.47538 13.5256 6.38582C13.3806 6.29626 13.2152 6.24523 13.045 6.23756C12.8748 6.2299 12.7054 6.26585 12.553 6.34202L8.553 8.34202C8.38692 8.42501 8.24722 8.55259 8.14955 8.71049C8.05188 8.86839 8.0001 9.05035 8 9.23602V15ZM12.211 4.27602C12.3769 4.19288 12.5164 4.06523 12.6138 3.90734C12.7113 3.74946 12.7629 3.56756 12.7629 3.38202C12.7629 3.19647 12.7113 3.01457 12.6138 2.85669C12.5164 2.69881 12.3769 2.57115 12.211 2.48802L7.447 0.106015C7.3082 0.0366567 7.15516 0.000549316 7 0.000549316C6.84484 0.000549316 6.6918 0.0366567 6.553 0.106015L1.789 2.48802C1.62312 2.57115 1.48364 2.69881 1.38617 2.85669C1.28869 3.01457 1.23707 3.19647 1.23707 3.38202C1.23707 3.56756 1.28869 3.74946 1.38617 3.90734C1.48364 4.06523 1.62312 4.19288 1.789 4.27602L6.553 6.65802C6.6918 6.72737 6.84484 6.76348 7 6.76348C7.15516 6.76348 7.3082 6.72737 7.447 6.65802L12.211 4.27602ZM1.447 6.34202C1.29458 6.26585 1.12522 6.2299 0.955006 6.23756C0.784787 6.24523 0.619351 6.29626 0.474394 6.38582C0.329438 6.47538 0.209769 6.60049 0.126744 6.74929C0.0437189 6.89808 9.09694e-05 7.06562 0 7.23602V13C9.91486e-05 13.1857 0.0518831 13.3676 0.149552 13.5255C0.247222 13.6834 0.386919 13.811 0.553 13.894L4.553 15.894C4.70542 15.9702 4.87477 16.0061 5.04499 15.9985C5.21521 15.9908 5.38065 15.9398 5.52561 15.8502C5.67056 15.7607 5.79023 15.6355 5.87326 15.4867C5.95628 15.3379 5.99991 15.1704 6 15V9.23602C5.9999 9.05035 5.94812 8.86839 5.85045 8.71049C5.75278 8.55259 5.61308 8.42501 5.447 8.34202L1.447 6.34202Z"
+                fill="#B0BABF"
+              />
+            </svg>
+            &nbsp;&nbsp;Orders
+          </button>
+
+          <button class="icon_btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.17115 6.22115C5.92126 5.47127 6.93849 5.05001 7.99915 5.05001C9.0598 5.05001 10.077 5.47127 10.8271 6.22115L11.9991 7.39215L13.1711 6.22115C13.5401 5.83911 13.9815 5.53438 14.4695 5.32475C14.9575 5.11511 15.4824 5.00477 16.0135 5.00015C16.5447 4.99554 17.0714 5.09674 17.563 5.29787C18.0545 5.49899 18.5012 5.796 18.8767 6.17157C19.2523 6.54714 19.5493 6.99375 19.7504 7.48534C19.9516 7.97692 20.0528 8.50364 20.0481 9.03476C20.0435 9.56588 19.9332 10.0908 19.7236 10.5788C19.5139 11.0668 19.2092 11.5082 18.8271 11.8772L11.9991 18.7062L5.17115 11.8772C4.42126 11.127 4 10.1098 4 9.04915C4 7.9885 4.42126 6.97126 5.17115 6.22115Z"
+                fill="#B0BABF"
+              />
+            </svg>
+            &nbsp;&nbsp;Favourites
+          </button>
+
+          <button class="icon_btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 3C4.73478 3 4.48043 3.10536 4.29289 3.29289C4.10536 3.48043 4 3.73478 4 4C4 4.26522 4.10536 4.51957 4.29289 4.70711C4.48043 4.89464 4.73478 5 5 5H6.22L6.525 6.222C6.52803 6.23607 6.53136 6.25007 6.535 6.264L7.893 11.694L7 12.586C5.74 13.846 6.632 16 8.414 16H17C17.2652 16 17.5196 15.8946 17.7071 15.7071C17.8946 15.5196 18 15.2652 18 15C18 14.7348 17.8946 14.4804 17.7071 14.2929C17.5196 14.1054 17.2652 14 17 14H8.414L9.414 13H16C16.1857 12.9999 16.3676 12.9481 16.5255 12.8504C16.6834 12.7528 16.811 12.6131 16.894 12.447L19.894 6.447C19.9702 6.29458 20.0061 6.12522 19.9985 5.95501C19.9908 5.78479 19.9398 5.61935 19.8502 5.47439C19.7606 5.32944 19.6355 5.20977 19.4867 5.12674C19.3379 5.04372 19.1704 5.00009 19 5H8.28L7.97 3.757C7.91583 3.54075 7.79095 3.34881 7.61521 3.21166C7.43946 3.0745 7.22293 3.00001 7 3H5ZM18 18.5C18 18.8978 17.842 19.2794 17.5607 19.5607C17.2794 19.842 16.8978 20 16.5 20C16.1022 20 15.7206 19.842 15.4393 19.5607C15.158 19.2794 15 18.8978 15 18.5C15 18.1022 15.158 17.7206 15.4393 17.4393C15.7206 17.158 16.1022 17 16.5 17C16.8978 17 17.2794 17.158 17.5607 17.4393C17.842 17.7206 18 18.1022 18 18.5ZM8.5 20C8.89782 20 9.27936 19.842 9.56066 19.5607C9.84196 19.2794 10 18.8978 10 18.5C10 18.1022 9.84196 17.7206 9.56066 17.4393C9.27936 17.158 8.89782 17 8.5 17C8.10218 17 7.72064 17.158 7.43934 17.4393C7.15804 17.7206 7 18.1022 7 18.5C7 18.8978 7.15804 19.2794 7.43934 19.5607C7.72064 19.842 8.10218 20 8.5 20Z"
+                fill="#B0BABF"
+              />
+            </svg>
+            &nbsp;&nbsp;Cart
+          </button>
+
+          <button id="signin_btn">Sign in</button>
+        </div>
+
+        <!-- nav2 starts here -->
+        <div id="nav2">
+          <button class="icon_btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.05002 6.04999C8.36284 4.73717 10.1434 3.99963 12 3.99963C13.8566 3.99963 15.6372 4.73717 16.95 6.04999C18.2628 7.36281 19.0004 9.14338 19.0004 11C19.0004 12.8566 18.2628 14.6372 16.95 15.95L12 20.9L7.05002 15.95C6.39993 15.3 5.88425 14.5283 5.53242 13.6789C5.1806 12.8296 4.99951 11.9193 4.99951 11C4.99951 10.0807 5.1806 9.17037 5.53242 8.32104C5.88425 7.47172 6.39993 6.70001 7.05002 6.04999ZM12 13C12.5304 13 13.0392 12.7893 13.4142 12.4142C13.7893 12.0391 14 11.5304 14 11C14 10.4696 13.7893 9.96085 13.4142 9.58578C13.0392 9.2107 12.5304 8.99999 12 8.99999C11.4696 8.99999 10.9609 9.2107 10.5858 9.58578C10.2107 9.96085 10 10.4696 10 11C10 11.5304 10.2107 12.0391 10.5858 12.4142C10.9609 12.7893 11.4696 13 12 13Z"
+                fill="#B0BABF"
+              />
+            </svg>
+            California
+          </button>
+
+          <div id="other_links">
+            <a href="#">Best Sellers</a>
+            <a href="#">New Releases</a>
+            <a href="#">Books</a>
+            <a href="#">Computers</a>
+            <a href="#">Fashion</a>
+            <a href="#">Health</a>
+            <a href="#">Pharmacy</a>
+            <a href="#">Toys & Games</a>
+          </div>
+
+          <a href="/table.html">Become a seller</a>
+        </div>
+      </nav>
+    </header>
+    <section id="result_container">
+      <h3>Found 376 results for <span>dji phantom</span></h3>
+
+      <div id="sorting_section">
+        <div id="sorting_section_holder">
+          <label for="sort_by">Sort by</label>
+          <select id="sort_by" name="sort_by">
+            <option value="featured" selected>Featured</option>
+            <option value="country">Country</option>
+            <option value="price">Price</option>
+          </select>
+        </div>
+        <div id="sorting_section_btns">
+          <button class="icon_btn">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V4C0 4.53043 0.210714 5.03914 0.585786 5.41421C0.960859 5.78929 1.46957 6 2 6H4C4.53043 6 5.03914 5.78929 5.41421 5.41421C5.78929 5.03914 6 4.53043 6 4V2C6 1.46957 5.78929 0.960859 5.41421 0.585786C5.03914 0.210714 4.53043 0 4 0H2ZM2 8C1.46957 8 0.960859 8.21071 0.585786 8.58579C0.210714 8.96086 0 9.46957 0 10V12C0 12.5304 0.210714 13.0391 0.585786 13.4142C0.960859 13.7893 1.46957 14 2 14H4C4.53043 14 5.03914 13.7893 5.41421 13.4142C5.78929 13.0391 6 12.5304 6 12V10C6 9.46957 5.78929 8.96086 5.41421 8.58579C5.03914 8.21071 4.53043 8 4 8H2ZM8 2C8 1.46957 8.21071 0.960859 8.58579 0.585786C8.96086 0.210714 9.46957 0 10 0H12C12.5304 0 13.0391 0.210714 13.4142 0.585786C13.7893 0.960859 14 1.46957 14 2V4C14 4.53043 13.7893 5.03914 13.4142 5.41421C13.0391 5.78929 12.5304 6 12 6H10C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4V2ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8H12C12.5304 8 13.0391 8.21071 13.4142 8.58579C13.7893 8.96086 14 9.46957 14 10V12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14H10C9.46957 14 8.96086 13.7893 8.58579 13.4142C8.21071 13.0391 8 12.5304 8 12V10Z"
+                fill="#252C32"
+              />
+            </svg>
+          </button>
+
+          <button class="icon_btn">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H13C13.2652 0 13.5196 0.105357 13.7071 0.292893C13.8946 0.48043 14 0.734784 14 1C14 1.26522 13.8946 1.51957 13.7071 1.70711C13.5196 1.89464 13.2652 2 13 2H1C0.734784 2 0.48043 1.89464 0.292893 1.70711C0.105357 1.51957 0 1.26522 0 1ZM0 5C0 4.73478 0.105357 4.48043 0.292893 4.29289C0.48043 4.10536 0.734784 4 1 4H13C13.2652 4 13.5196 4.10536 13.7071 4.29289C13.8946 4.48043 14 4.73478 14 5C14 5.26522 13.8946 5.51957 13.7071 5.70711C13.5196 5.89464 13.2652 6 13 6H1C0.734784 6 0.48043 5.89464 0.292893 5.70711C0.105357 5.51957 0 5.26522 0 5ZM0 9C0 8.73478 0.105357 8.48043 0.292893 8.29289C0.48043 8.10536 0.734784 8 1 8H13C13.2652 8 13.5196 8.10536 13.7071 8.29289C13.8946 8.48043 14 8.73478 14 9C14 9.26522 13.8946 9.51957 13.7071 9.70711C13.5196 9.89464 13.2652 10 13 10H1C0.734784 10 0.48043 9.89464 0.292893 9.70711C0.105357 9.51957 0 9.26522 0 9ZM0 13C0 12.7348 0.105357 12.4804 0.292893 12.2929C0.48043 12.1054 0.734784 12 1 12H13C13.2652 12 13.5196 12.1054 13.7071 12.2929C13.8946 12.4804 14 12.7348 14 13C14 13.2652 13.8946 13.5196 13.7071 13.7071C13.5196 13.8946 13.2652 14 13 14H1C0.734784 14 0.48043 13.8946 0.292893 13.7071C0.105357 13.5196 0 13.2652 0 13Z"
+                fill="#B0BABF"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-      <!-- Table Heading starts here -->
-      <div class="table">
-        <div class="table-head name grey-text">
-          <input type="checkbox"/>
-          <div>Name</div>
+    </section>
+    <main>
+      <!-- aside starts here -->
+      <aside>
+        <div class="filter_section" id="price_filter">
+          <h3>Price, $</h3>
+          <div id="price_filter_inputs">
+            <input type="text" name="min" placeholder="min" />
+            <input type="text" name="max" placeholder="max" />
+          </div>
         </div>
-        <div class="table-head status grey-text">
-          <div>Status</div>
-          <img src="assets/images/icons/arrow-down.svg" alt="" class="status-icon" />
-        </div>
-        <div class="table-head role grey-text">
-          <div>Role</div>
-          <img src="assets/images/icons/help_icon.svg" alt="" />
-        </div>
-        <div class="table-head email grey-text">Email address</div>
-        <div class="table-head team grey-text">Teams</div>
 
-        <!-- Table body starts here. Copy this section for each user -->      
-        
-        <!-- User 1 starts here -->    
-
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox"/>
-          <img src="./assets/images/avatar/olivia.png" alt="" height="40px" />
+        <div class="filter_section">
+          <h3>Quadcopter Features</h3>
           <div>
-            <div class="user-name">Olivia Rhye</div>
-            <div class="grey-text">@olivia</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">
-          <div class="text">Product Designer</div>
-        </div>
-        <div class="table-body user-email grey-text">olivia@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
+            <div class="filter_checkbox">
+              <input
+                type="checkbox"
+                name="app-controlled"
+                id="app-controlled"
+              />
+              <label for="app-controlled">App-Controlled</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input
+                type="checkbox"
+                name="obstacle_avoidance"
+                id="obstacle_avoidance"
+              />
+              <label for="obstacle_avoidance">Obstacle Avoidance</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input
+                type="checkbox"
+                name="video_downlink_capable"
+                id="video_downlink_capable"
+              />
+              <label for="video_downlink_capable">Video Downlink Capable</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input type="checkbox" name="wifi" id="wifi" />
+              <label for="wifi">Wi-Fi</label>
+            </div>
           </div>
         </div>
 
-        <!-- User 2 starts here -->
-
-        <div class="table-body user-info">
-          <input type="checkbox">
-          <img src="./assets/images/avatar/phoenix.png" alt="" height="40px">
-          <div >
-            <div class="user-name">Phoenix Baker</div>
-            <div class="grey-text">@phoenix</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot" height="8px"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">  
-          <div class="text">Product Manager</div>                
-        </div>
-        <div class="table-body user-email grey-text">phoenix@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">                   
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div> 
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg">
-            <img src="assets/images/icons/pen.svg" alt="">
-          </div>
-        </div> 
-
-        <!-- User 3 starts here -->
-
-        <div class="table-body user-info">
-          <input type="checkbox">
-          <img src="./assets/images/avatar/lana.png" alt="" height="40px">
-          <div >
-            <div class="user-name">Lana Steiner</div>
-            <div class="grey-text">@steiner</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot" height="8px"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">  
-          <div class="text">Frontend Developer</div>                
-        </div>
-        <div class="table-body user-email grey-text">lana@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">                   
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div> 
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg">
-            <img src="assets/images/icons/pen.svg" alt="">
-          </div>
-        </div> 
-
-        <!-- User 4 starts here -->
-
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/demi.png" alt="" height="40px" />
+        <div class="filter_section">
+          <h3>Video Capture Resolution</h3>
           <div>
-            <div class="user-name">Demi Wilkinson</div>
-            <div class="grey-text">@demi</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">Backend Developer</div>
-        <div class="table-body user-email grey-text">demi@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
+            <div class="filter_checkbox">
+              <input type="checkbox" name="4k_UHD_2160p" id="4k_UHD_2160p" />
+              <label for="4k_UHD_2160p">4K UHD 2160p</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input type="checkbox" name="fhd_1080p" id="fhd_1080p" />
+              <label for="fhd_1080p">FHD 1080p</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input type="checkbox" name="hd_720p" id="hd_720p" /><label
+                for="hd_720p"
+                >HD 720p</label
+              >
+            </div>
           </div>
         </div>
 
-        <!-- User 5 starts here -->
-
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/cw.png" alt="" height="40px" />
+        <div class="filter_section">
+          <h3>Operator Skill Level</h3>
           <div>
-            <div class="user-name">Candice Wu</div>
-            <div class="grey-text">@candice</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">Fullstack Developer</div>
-        <div class="table-body user-email grey-text">candice@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
+            <div class="filter_checkbox">
+              <input type="checkbox" name="beginner" id="beginner" />
+              <label for="beginner">Beginner</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input type="checkbox" name="intermediate" id="intermediate" />
+              <label for="intermediate">Intermediate</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input type="checkbox" name="expert" id="expert" />
+              <label for="expert">Expert</label>
+            </div>
           </div>
         </div>
 
-        <!-- User 6 starts here -->
-
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/natali.png" alt="" height="40px" />
+        <div class="filter_section">
+          <h3>Brand</h3>
           <div>
-            <div class="user-name">Natail Craig</div>
-            <div class="grey-text">@natali</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">UX Designer</div>
-        <div class="table-body user-email grey-text">natali@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
-          </div>
-        </div>
+            <div class="filter_checkbox">
+              <input type="checkbox" name="dji" id="dji" />
+              <label for="dji">Dji</label>
+            </div>
 
-        <!-- User 7 starts here -->
+            <div class="filter_checkbox">
+              <input type="checkbox" name="holy_stone" id="holy_stone" />
+              <label for="holy_stone">Holy Stone</label>
+            </div>
 
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/drew.png" alt="" height="40px" />
-          <div>
-            <div class="user-name">Drew Cano</div>
-            <div class="grey-text">@drew</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">UX Copywriter</div>
-        <div class="table-body user-email grey-text">drew@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
-          </div>
-        </div>
+            <div class="filter_checkbox">
+              <input type="checkbox" name="potensic" id="potensic" />
+              <label for="potensic">Potensic</label>
+            </div>
 
-        <!-- User 8 starts here -->
+            <div class="filter_checkbox">
+              <input type="checkbox" name="ruko" id="ruko" />
+              <label for="ruko">Ruko</label>
+            </div>
 
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/od.png" alt="" height="40px" />
-          <div>
-            <div class="user-name">Orlando Diggs</div>
-            <div class="grey-text">@orlando</div>
-          </div>
-        </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
-          </div>
-        </div>
-        <div class="table-body user-role grey-text">UI Designer</div>
-        <div class="table-body user-email grey-text">orlando@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
-          </div>
-        </div>
+            <div class="filter_checkbox">
+              <input type="checkbox" name="aovo" id="aovo" />
+              <label for="aovo">aovo</label>
+            </div>
 
-        <!-- User 9 starts here -->
-        
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/andi.png" alt="" height="40px" />
-          <div>
-            <div class="user-name">Andi Lane</div>
-            <div class="grey-text">@andi</div>
+            <div class="filter_checkbox">
+              <input type="checkbox" name="oxoxo" id="oxoxo" />
+              <label for="oxoxo">oxoxo</label>
+            </div>
+
+            <div class="filter_checkbox">
+              <input type="checkbox" name="deerc" id="deerc" />
+              <label for="deerc">DEERC</label>
+            </div>
           </div>
         </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
+      </aside>
+      <!-- main starts here -->
+      <section id="cards_list">
+        <div class="item">
+          <div class="item_main">
+            <div class="item_image">
+              <img src="assets/images/image/image8.png" />
+            </div>
+            <div class="item_text">
+              <p class="item_description">DJI Phantom 2 Vision+</p>
+              <p class="item_price">$599</p>
+              <p class="item_rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span>243</span>
+              </p>
+            </div>
+          </div>
+          <div class="item_features">
+            <button class="like_item">
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.17115 1.22115C1.92126 0.471268 2.93849 0.0500067 3.99915 0.0500067C5.0598 0.0500067 6.07703 0.471268 6.82715 1.22115L7.99915 2.39215L9.17115 1.22115C9.54013 0.839112 9.98151 0.534383 10.4695 0.324747C10.9575 0.115111 11.4824 0.00476629 12.0135 0.000151027C12.5447 -0.00446424 13.0714 0.0967427 13.563 0.297866C14.0545 0.49899 14.5012 0.796002 14.8767 1.17157C15.2523 1.54714 15.5493 1.99375 15.7504 2.48534C15.9516 2.97692 16.0528 3.50364 16.0481 4.03476C16.0435 4.56588 15.9332 5.09075 15.7236 5.57877C15.5139 6.06679 15.2092 6.50817 14.8271 6.87715L7.99915 13.7062L1.17115 6.87715C0.421261 6.12704 0 5.10981 0 4.04915C0 2.9885 0.421261 1.97126 1.17115 1.22115Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+            <button class="add_item">
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H10C10.5304 16 11.0391 15.7893 11.4142 15.4142C11.7893 15.0391 12 14.5304 12 14V5.414C11.9999 4.88361 11.7891 4.37499 11.414 4L8 0.586C7.62501 0.210901 7.11639 0.000113275 6.586 0H2ZM7 6C7 5.73478 6.89464 5.48043 6.70711 5.29289C6.51957 5.10536 6.26522 5 6 5C5.73478 5 5.48043 5.10536 5.29289 5.29289C5.10536 5.48043 5 5.73478 5 6V8H3C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9C2 9.26522 2.10536 9.51957 2.29289 9.70711C2.48043 9.89464 2.73478 10 3 10H5V12C5 12.2652 5.10536 12.5196 5.29289 12.7071C5.48043 12.8946 5.73478 13 6 13C6.26522 13 6.51957 12.8946 6.70711 12.7071C6.89464 12.5196 7 12.2652 7 12V10H9C9.26522 10 9.51957 9.89464 9.70711 9.70711C9.89464 9.51957 10 9.26522 10 9C10 8.73478 9.89464 8.48043 9.70711 8.29289C9.51957 8.10536 9.26522 8 9 8H7V6Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="table-body user-role grey-text">Product Manager</div>
-        <div class="table-body user-email grey-text">andi@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
+        <div class="item">
+          <div class="item_main">
+            <div class="item_image">
+              <img src="assets/images/image/image9.png" />
+            </div>
+            <div class="item_text">
+              <p class="item_description">DJI Phantom 4 Multispectral</p>
+              <p class="item_price">$1499</p>
+              <p class="item_rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span>98</span>
+              </p>
+            </div>
           </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
-          </div>
-        </div>        
-
-        
-        <!-- User 10 starts here -->
-
-        <div class="table-body grey-text name user-info">
-          <input type="checkbox" />
-          <img src="./assets/images/avatar/kate.png" alt="" height="40px" />
-          <div>
-            <div class="user-name">Kate Morrison</div>
-            <div class="grey-text">@kate</div>
+          <div class="item_features">
+            <button class="like_item">
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.17115 1.22115C1.92126 0.471268 2.93849 0.0500067 3.99915 0.0500067C5.0598 0.0500067 6.07703 0.471268 6.82715 1.22115L7.99915 2.39215L9.17115 1.22115C9.54013 0.839112 9.98151 0.534383 10.4695 0.324747C10.9575 0.115111 11.4824 0.00476629 12.0135 0.000151027C12.5447 -0.00446424 13.0714 0.0967427 13.563 0.297866C14.0545 0.49899 14.5012 0.796002 14.8767 1.17157C15.2523 1.54714 15.5493 1.99375 15.7504 2.48534C15.9516 2.97692 16.0528 3.50364 16.0481 4.03476C16.0435 4.56588 15.9332 5.09075 15.7236 5.57877C15.5139 6.06679 15.2092 6.50817 14.8271 6.87715L7.99915 13.7062L1.17115 6.87715C0.421261 6.12704 0 5.10981 0 4.04915C0 2.9885 0.421261 1.97126 1.17115 1.22115Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+            <button class="add_item">
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H10C10.5304 16 11.0391 15.7893 11.4142 15.4142C11.7893 15.0391 12 14.5304 12 14V5.414C11.9999 4.88361 11.7891 4.37499 11.414 4L8 0.586C7.62501 0.210901 7.11639 0.000113275 6.586 0H2ZM7 6C7 5.73478 6.89464 5.48043 6.70711 5.29289C6.51957 5.10536 6.26522 5 6 5C5.73478 5 5.48043 5.10536 5.29289 5.29289C5.10536 5.48043 5 5.73478 5 6V8H3C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9C2 9.26522 2.10536 9.51957 2.29289 9.70711C2.48043 9.89464 2.73478 10 3 10H5V12C5 12.2652 5.10536 12.5196 5.29289 12.7071C5.48043 12.8946 5.73478 13 6 13C6.26522 13 6.51957 12.8946 6.70711 12.7071C6.89464 12.5196 7 12.2652 7 12V10H9C9.26522 10 9.51957 9.89464 9.70711 9.70711C9.89464 9.51957 10 9.26522 10 9C10 8.73478 9.89464 8.48043 9.70711 8.29289C9.51957 8.10536 9.26522 8 9 8H7V6Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="table-body status">
-          <div class="active-bg tags">
-            <div class="active-dot"></div>
-            <div class="active">Active</div>
+        <div class="item">
+          <div class="item_main">
+            <div class="item_image">
+              <img src="assets/images/image/image10.png" />
+            </div>
+            <div class="item_text">
+              <p class="item_description">DJI Phantom 4 PRO</p>
+              <p class="item_price">$739</p>
+              <p class="item_rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span>1,002</span>
+              </p>
+            </div>
+          </div>
+          <div class="item_features">
+            <button class="like_item">
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.17115 1.22115C1.92126 0.471268 2.93849 0.0500067 3.99915 0.0500067C5.0598 0.0500067 6.07703 0.471268 6.82715 1.22115L7.99915 2.39215L9.17115 1.22115C9.54013 0.839112 9.98151 0.534383 10.4695 0.324747C10.9575 0.115111 11.4824 0.00476629 12.0135 0.000151027C12.5447 -0.00446424 13.0714 0.0967427 13.563 0.297866C14.0545 0.49899 14.5012 0.796002 14.8767 1.17157C15.2523 1.54714 15.5493 1.99375 15.7504 2.48534C15.9516 2.97692 16.0528 3.50364 16.0481 4.03476C16.0435 4.56588 15.9332 5.09075 15.7236 5.57877C15.5139 6.06679 15.2092 6.50817 14.8271 6.87715L7.99915 13.7062L1.17115 6.87715C0.421261 6.12704 0 5.10981 0 4.04915C0 2.9885 0.421261 1.97126 1.17115 1.22115Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+            <button class="add_item">
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H10C10.5304 16 11.0391 15.7893 11.4142 15.4142C11.7893 15.0391 12 14.5304 12 14V5.414C11.9999 4.88361 11.7891 4.37499 11.414 4L8 0.586C7.62501 0.210901 7.11639 0.000113275 6.586 0H2ZM7 6C7 5.73478 6.89464 5.48043 6.70711 5.29289C6.51957 5.10536 6.26522 5 6 5C5.73478 5 5.48043 5.10536 5.29289 5.29289C5.10536 5.48043 5 5.73478 5 6V8H3C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9C2 9.26522 2.10536 9.51957 2.29289 9.70711C2.48043 9.89464 2.73478 10 3 10H5V12C5 12.2652 5.10536 12.5196 5.29289 12.7071C5.48043 12.8946 5.73478 13 6 13C6.26522 13 6.51957 12.8946 6.70711 12.7071C6.89464 12.5196 7 12.2652 7 12V10H9C9.26522 10 9.51957 9.89464 9.70711 9.70711C9.89464 9.51957 10 9.26522 10 9C10 8.73478 9.89464 8.48043 9.70711 8.29289C9.51957 8.10536 9.26522 8 9 8H7V6Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="table-body user-role grey-text">QA Engineer</div>
-        <div class="table-body user-email grey-text">kate@untitledui.com</div>
-        <div class="table-body teams">
-          <div class="team-tags">
-            <div class="design tags">Design</div>
-            <div class="product tags">Product</div>
-            <div class="marketing tags">Marketing</div>
-            <div class="tag-no tags">+4</div>
+        <div class="item">
+          <div class="item_main">
+            <div class="item_image">
+              <img src="assets/images/image/image11.png" />
+            </div>
+            <div class="item_text">
+              <p class="item_description">
+                4 Series — Intelligent Flight Battery (5…
+              </p>
+              <p class="item_price">$186</p>
+              <p class="item_rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span>243</span>
+              </p>
+            </div>
           </div>
-          <div class="icons">
-            <img src="assets/images/icons/delete.svg" class="delete-icon" />
-            <img src="assets/images/icons/pen.svg" alt="" class="pen-icon" />
+          <div class="item_features">
+            <button class="like_item">
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.17115 1.22115C1.92126 0.471268 2.93849 0.0500067 3.99915 0.0500067C5.0598 0.0500067 6.07703 0.471268 6.82715 1.22115L7.99915 2.39215L9.17115 1.22115C9.54013 0.839112 9.98151 0.534383 10.4695 0.324747C10.9575 0.115111 11.4824 0.00476629 12.0135 0.000151027C12.5447 -0.00446424 13.0714 0.0967427 13.563 0.297866C14.0545 0.49899 14.5012 0.796002 14.8767 1.17157C15.2523 1.54714 15.5493 1.99375 15.7504 2.48534C15.9516 2.97692 16.0528 3.50364 16.0481 4.03476C16.0435 4.56588 15.9332 5.09075 15.7236 5.57877C15.5139 6.06679 15.2092 6.50817 14.8271 6.87715L7.99915 13.7062L1.17115 6.87715C0.421261 6.12704 0 5.10981 0 4.04915C0 2.9885 0.421261 1.97126 1.17115 1.22115Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+            <button class="add_item">
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H10C10.5304 16 11.0391 15.7893 11.4142 15.4142C11.7893 15.0391 12 14.5304 12 14V5.414C11.9999 4.88361 11.7891 4.37499 11.414 4L8 0.586C7.62501 0.210901 7.11639 0.000113275 6.586 0H2ZM7 6C7 5.73478 6.89464 5.48043 6.70711 5.29289C6.51957 5.10536 6.26522 5 6 5C5.73478 5 5.48043 5.10536 5.29289 5.29289C5.10536 5.48043 5 5.73478 5 6V8H3C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9C2 9.26522 2.10536 9.51957 2.29289 9.70711C2.48043 9.89464 2.73478 10 3 10H5V12C5 12.2652 5.10536 12.5196 5.29289 12.7071C5.48043 12.8946 5.73478 13 6 13C6.26522 13 6.51957 12.8946 6.70711 12.7071C6.89464 12.5196 7 12.2652 7 12V10H9C9.26522 10 9.51957 9.89464 9.70711 9.70711C9.89464 9.51957 10 9.26522 10 9C10 8.73478 9.89464 8.48043 9.70711 8.29289C9.51957 8.10536 9.26522 8 9 8H7V6Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
           </div>
-        </div>        
-
-<!-- Table pages starts here -->
-
-      </div>          
-      <div class="table-pages grey-text">
-        <button class="previous-btn">
-          <img src="./assets/images/icons/arrow-down.svg" alt=""><span class="previous">Previous</span></button>
-          <div>
-            <ul class="pagination">
-              <li class="active">1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>...</li>
-              <li>8</li>
-              <li>9</li>
-              <li>10</li>              
-            </ul>
-            <p class="mobile-page">Page 1 of 10</p>
-          </div>          
-          <button class="next-btn">
-          <span class="next">Next</span><img src="./assets/images/icons/arrow-down.svg" alt=""></button>
-      </div>  
+        </div>
+        <div class="item">
+          <div class="item_main">
+            <div class="item_image">
+              <img src="assets/images/image/image12.png" />
+            </div>
+            <div class="item_text">
+              <p class="item_description">
+                DJI Phantom 3 — Intelligent Flight Bat…
+              </p>
+              <p class="item_price">$98</p>
+              <p class="item_rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span>98</span>
+              </p>
+            </div>
+          </div>
+          <div class="item_features">
+            <button class="like_item">
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.17115 1.22115C1.92126 0.471268 2.93849 0.0500067 3.99915 0.0500067C5.0598 0.0500067 6.07703 0.471268 6.82715 1.22115L7.99915 2.39215L9.17115 1.22115C9.54013 0.839112 9.98151 0.534383 10.4695 0.324747C10.9575 0.115111 11.4824 0.00476629 12.0135 0.000151027C12.5447 -0.00446424 13.0714 0.0967427 13.563 0.297866C14.0545 0.49899 14.5012 0.796002 14.8767 1.17157C15.2523 1.54714 15.5493 1.99375 15.7504 2.48534C15.9516 2.97692 16.0528 3.50364 16.0481 4.03476C16.0435 4.56588 15.9332 5.09075 15.7236 5.57877C15.5139 6.06679 15.2092 6.50817 14.8271 6.87715L7.99915 13.7062L1.17115 6.87715C0.421261 6.12704 0 5.10981 0 4.04915C0 2.9885 0.421261 1.97126 1.17115 1.22115Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+            <button class="add_item">
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H10C10.5304 16 11.0391 15.7893 11.4142 15.4142C11.7893 15.0391 12 14.5304 12 14V5.414C11.9999 4.88361 11.7891 4.37499 11.414 4L8 0.586C7.62501 0.210901 7.11639 0.000113275 6.586 0H2ZM7 6C7 5.73478 6.89464 5.48043 6.70711 5.29289C6.51957 5.10536 6.26522 5 6 5C5.73478 5 5.48043 5.10536 5.29289 5.29289C5.10536 5.48043 5 5.73478 5 6V8H3C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9C2 9.26522 2.10536 9.51957 2.29289 9.70711C2.48043 9.89464 2.73478 10 3 10H5V12C5 12.2652 5.10536 12.5196 5.29289 12.7071C5.48043 12.8946 5.73478 13 6 13C6.26522 13 6.51957 12.8946 6.70711 12.7071C6.89464 12.5196 7 12.2652 7 12V10H9C9.26522 10 9.51957 9.89464 9.70711 9.70711C9.89464 9.51957 10 9.26522 10 9C10 8.73478 9.89464 8.48043 9.70711 8.29289C9.51957 8.10536 9.26522 8 9 8H7V6Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_main">
+            <div class="item_image">
+              <img src="assets/images/image/image13.png" />
+            </div>
+            <div class="item_text">
+              <p class="item_description">DJI Phantom 4 PRO</p>
+              <p class="item_price">$739</p>
+              <p class="item_rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i>
+                <i class="fa fa-star no-rating" aria-hidden="true"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span>1,002</span>
+              </p>
+            </div>
+          </div>
+          <div class="item_features">
+            <button class="like_item">
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.17115 1.22115C1.92126 0.471268 2.93849 0.0500067 3.99915 0.0500067C5.0598 0.0500067 6.07703 0.471268 6.82715 1.22115L7.99915 2.39215L9.17115 1.22115C9.54013 0.839112 9.98151 0.534383 10.4695 0.324747C10.9575 0.115111 11.4824 0.00476629 12.0135 0.000151027C12.5447 -0.00446424 13.0714 0.0967427 13.563 0.297866C14.0545 0.49899 14.5012 0.796002 14.8767 1.17157C15.2523 1.54714 15.5493 1.99375 15.7504 2.48534C15.9516 2.97692 16.0528 3.50364 16.0481 4.03476C16.0435 4.56588 15.9332 5.09075 15.7236 5.57877C15.5139 6.06679 15.2092 6.50817 14.8271 6.87715L7.99915 13.7062L1.17115 6.87715C0.421261 6.12704 0 5.10981 0 4.04915C0 2.9885 0.421261 1.97126 1.17115 1.22115Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+            <button class="add_item">
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H10C10.5304 16 11.0391 15.7893 11.4142 15.4142C11.7893 15.0391 12 14.5304 12 14V5.414C11.9999 4.88361 11.7891 4.37499 11.414 4L8 0.586C7.62501 0.210901 7.11639 0.000113275 6.586 0H2ZM7 6C7 5.73478 6.89464 5.48043 6.70711 5.29289C6.51957 5.10536 6.26522 5 6 5C5.73478 5 5.48043 5.10536 5.29289 5.29289C5.10536 5.48043 5 5.73478 5 6V8H3C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9C2 9.26522 2.10536 9.51957 2.29289 9.70711C2.48043 9.89464 2.73478 10 3 10H5V12C5 12.2652 5.10536 12.5196 5.29289 12.7071C5.48043 12.8946 5.73478 13 6 13C6.26522 13 6.51957 12.8946 6.70711 12.7071C6.89464 12.5196 7 12.2652 7 12V10H9C9.26522 10 9.51957 9.89464 9.70711 9.70711C9.89464 9.51957 10 9.26522 10 9C10 8.73478 9.89464 8.48043 9.70711 8.29289C9.51957 8.10536 9.26522 8 9 8H7V6Z"
+                  fill="#B0BABF"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
