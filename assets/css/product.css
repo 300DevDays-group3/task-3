@@ -1,0 +1,330 @@
+*{
+    font-family: Inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-rows: 112px 50px 1fr;
+
+}
+
+header{
+    padding: 1em 2em;
+}
+
+header nav div#nav1, header nav div#nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 15px; */
+    /* grid-gap: 10px; */
+}
+
+header nav #nav1 .icon_btn,
+header nav #nav2 .icon_btn{
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #666362;
+}
+
+header nav #nav1 .icon_btn:hover,
+header nav #nav2 .icon_btn:hover{
+    color: #000;
+    transition: color 0.3s linear, fill 0.6s ease-in;
+}
+
+header nav #nav1 .icon_btn:hover:not(#category_btn) svg > path,
+header nav #nav2 .icon_btn:hover:not(#category_btn) svg > path{
+    fill: #7c8386;
+}
+
+header nav #nav1 button#category_btn{
+    background-color: #4094F7;
+    border: none;
+    color: #fff;
+    transition: background-color .4s ease;
+}
+
+header nav #nav1 button#category_btn:hover{
+    background-color: #0b65cc;
+    
+}
+
+header nav div#nav1 #signin_btn{
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    color: #252C32;
+    font-size: 16px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: color .2s,  background .4s;
+}
+
+header nav div#nav1 #signin_btn:hover{
+    background: #7c8386;
+    color: #fff;
+}
+
+header nav #nav1 input#search_item{
+    width: 40vw;
+    background-color: #fff;
+    background-image: url('images/Vector.svg');
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    padding: 8px 40px;
+    padding-left: 18px;
+    border: 1px solid #dde2e4;
+    outline: none;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+header nav div#nav2 a{
+
+    text-decoration: none;
+    color: #656565;
+    font-size: 14px;
+    transition: color .4s;
+
+}
+
+header nav div#nav2 a:hover{
+
+    color: #000;
+
+}
+
+header nav div#nav2 div#other_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+section#result_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4em;
+}
+
+section#result_container h3{
+    font-size: 24px;
+    color: #252C32;
+}
+
+section#result_container h3 span{
+    color: #4094F7;
+}
+
+section#result_container div#sorting_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+section#result_container div#sorting_section #sorting_section_btns{
+    display: flex;
+    flex-direction: row;
+}
+
+section#result_container div#sorting_section .icon_btn{
+    border: none;
+    background: #ddd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+section#result_container div#sorting_section #sorting_section_holder{
+    margin-right: 10px;
+}
+
+section#result_container div#sorting_section #sorting_section_holder label{
+    color: #9AA6AC;
+    font-size: 14px;
+}
+
+section#result_container div#sorting_section #sorting_section_holder select{
+    border: none;
+    outline: none;
+    width: 80px;
+}
+
+section#result_container div#sorting_section .icon_btn svg{
+    
+    height: 14px;
+    width: 14px;
+    
+}
+
+section#result_container div#sorting_section .icon_btn:first-of-type{
+    background: #E5E9EB;
+    border-radius: 4px 0 0 4px; 
+}
+
+section#result_container div#sorting_section .icon_btn:last-of-type{
+    background: #F6F8F9;
+    border-radius: 0px 4px 4px 0; 
+}
+
+main{
+    display: grid;
+    grid-template-columns:1fr 4fr;
+    grid-gap: 20px;
+    gap: 20px;
+    padding: 0 4em;
+}
+
+aside{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 2em;
+
+}
+
+aside .filter_section{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: start;
+    gap: 1em;
+    height: fit-content;
+}
+
+aside .filter_section h3{
+    font-size: 14px;
+}
+
+aside .filter_section #price_filter_inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+aside .filter_section #price_filter_inputs input{
+    padding: 10px 14px;
+    border: 1px solid #dde2e4;
+    border-radius: 6px;
+    width: 120px;
+}
+
+aside .filter_section > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5em;
+    font-size: 12px;
+}
+
+aside .filter_section .filter_checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+section#cards_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+section#cards_list .item{
+    height: 394px;
+    border: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-right: 8px;
+}
+
+section#cards_list .item .item_main{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    grid-gap: 20px;
+}
+
+section#cards_list .item .item_main .item_text{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 7px;
+    gap: 7px;
+    align-self: flex-start;
+}
+
+section#cards_list .item .item_main .item_text .item_description{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+section#cards_list .item .item_main .item_text .item_price{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section#cards_list .item .item_main .item_text .item_rating span{
+    font-size: 12px;
+    color: #5B6871;
+    ;
+}
+
+section#cards_list .item .item_features{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 16px;
+    gap: 16px;
+    
+}
+
+section#cards_list .item .item_features button{
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+section#cards_list .item .item_features button svg > path{
+    /* transition: fill ease-in .4; */
+    transition: fill 0.6;
+}
+
+section#cards_list .item .item_features button svg:hover > path{
+    fill: #7c8386;
+}
+
+section#cards_list .item .item_rating .fa-star,
+section#cards_list .item .item_rating .fa-star-half{
+    color:#F8C51B;
+
+}
+
+/* FOR STARS WITHOUT COLOR */
+section#cards_list .item .item_rating .no-rating{
+    color: #ddd !important;
+
+}
+
