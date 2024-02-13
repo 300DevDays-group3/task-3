@@ -22,6 +22,7 @@ header nav div#nav1, header nav div#nav2{
     /* grid-gap: 10px; */
 }
 
+.table_btn, 
 header nav #nav1 .icon_btn,
 header nav #nav2 .icon_btn{
     border: none;
@@ -48,14 +49,14 @@ header nav #nav2 .icon_btn:hover:not(#category_btn) svg > path{
     fill: #7c8386;
 }
 
-header nav #nav1 button#category_btn{
+.table_btn, header nav #nav1 button#category_btn{
     background-color: #4094F7;
     border: none;
     color: #fff;
     transition: background-color .4s ease;
 }
 
-header nav #nav1 button#category_btn:hover{
+.table_btn:hover, header nav #nav1 button#category_btn:hover{
     background-color: #0b65cc;
     
 }
@@ -328,3 +329,12 @@ section#cards_list .item .item_rating .no-rating{
 
 }
 
+.table_btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.table_btn{
+    width: 40%;
+    margin: 2rem auto;
+}
